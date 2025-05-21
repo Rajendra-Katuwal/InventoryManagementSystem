@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class AuditLog {
 	private int logId;
@@ -8,6 +9,17 @@ public class AuditLog {
 	private String action;
 	private String details;
 	private Timestamp createdAt;
+
+	public AuditLog() {
+	}
+
+	public AuditLog(int userId, String action, String details) {
+		super();
+		this.userId = userId;
+		this.action = action;
+		this.details = details;
+		this.createdAt = Timestamp.valueOf(LocalDateTime.now());
+	}
 
 	// Getter and Setter Methods
 	public int getLogId() {
