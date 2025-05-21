@@ -1,0 +1,184 @@
+@import url("global.css");
+
+/* Base notification styles */
+.notification-modal {
+	display: flex;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 0;
+	border-radius: 10px;
+	z-index: 1001;
+	color: var(--text-dark);
+	font-size: 0.95em;
+	max-width: 350px;
+	min-width: 280px;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+	min-height: 54px;
+	overflow: hidden;
+	background-color: var(--white);
+	transition: opacity 0.3s ease;
+}
+
+/* Container for the icon and message (left section) */
+.notification-modal-content {
+	flex: 1;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+/* Status indicator bar on left side */
+.notification-modal-indicator {
+	width: 6px;
+	min-height: 54px;
+	align-self: stretch;
+}
+
+/* Icon container */
+.notification-modal-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 14px;
+	font-size: 1.2em;
+}
+
+/* Message text */
+.notification-modal-message {
+	padding: 16px 0;
+	word-break: break-word;
+	line-height: 1.4;
+	font-weight: 500;
+}
+
+/* Container for the close button (right section) */
+.notification-modal-actions {
+	display: flex;
+	align-items: flex-start;
+	padding: 8px;
+}
+
+/* Close button styling */
+.notification-modal-close {
+	background: none;
+	border: none;
+	color: var(--gray-400);
+	cursor: pointer;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.2s ease;
+	font-size: 1.2em;
+	border-radius: 50%;
+	width: 26px;
+	height: 26px;
+}
+
+.notification-modal-close:hover {
+	color: var(--gray-700);
+	background-color: var(--gray-100);
+}
+
+/* Type-specific styles */
+.notification-modal-error .notification-modal-indicator {
+	background-color: var(--error);
+}
+
+.notification-modal-error .notification-modal-icon {
+	color: var(--error);
+}
+
+.notification-modal-success .notification-modal-indicator {
+	background-color: var(--success);
+}
+
+.notification-modal-success .notification-modal-icon {
+	color: var(--success);
+}
+
+.notification-modal-warning .notification-modal-indicator {
+	background-color: var(--warning);
+}
+
+.notification-modal-warning .notification-modal-icon {
+	color: var(--warning);
+}
+
+.notification-modal-info .notification-modal-indicator {
+	background-color: var(--info);
+}
+
+.notification-modal-info .notification-modal-icon {
+	color: var(--info);
+}
+
+/* Dark mode variants */
+.notification-modal.dark-theme {
+	background-color: var(--gray-800);
+	color: var(--text-light);
+}
+
+.notification-modal.dark-theme .notification-modal-close {
+	color: var(--gray-400);
+}
+
+.notification-modal.dark-theme .notification-modal-close:hover {
+	color: var(--white);
+	background-color: var(--gray-700);
+}
+
+/* Progress bar animation */
+.notification-modal-progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	transform-origin: left;
+}
+
+.notification-modal-error .notification-modal-progress {
+	background-color: var(--error);
+}
+
+.notification-modal-success .notification-modal-progress {
+	background-color: var(--success);
+}
+
+.notification-modal-warning .notification-modal-progress {
+	background-color: var(--warning);
+}
+
+.notification-modal-info .notification-modal-progress {
+	background-color: var(--info);
+}
+
+/* Animation for notification appearance */
+@keyframes fadeInRight {from { opacity:0;
+	transform: translateX(30px);
+}
+
+to {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+}
+@keyframes progressShrink {from { transform:scaleX(1);
+	
+}
+
+to {
+	transform: scaleX(0);
+}
+
+}
+.notification-modal {
+	animation: fadeInRight 0.3s ease forwards;
+}
+
+.notification-modal-progress {
+	animation: progressShrink 5s linear forwards;
+}

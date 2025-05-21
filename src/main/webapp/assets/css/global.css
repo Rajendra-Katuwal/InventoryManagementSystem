@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: var(--bg-light);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+:root {
+	/* Primary Colors */
+	--primary: #3a6ea5;
+	--primary-dark: #004d87;
+	--primary-darker: #004785;
+	--primary-light: #e6f0f9;
+	
+	/* Secondary Colors */
+	--secondary: #c0d6df;
+	--secondary-dark: #00396d;
+	
+	/* Accent Colors */
+	--accent: #ff6b35;
+	--accent-hover: #e65a29;
+	
+	/* Background Colors */
+	--bg-light: #f0f4f8;
+	--bg-lighter: #f9f9f9;
+	--bg-dark: #004e89;
+	--feature-bg: rgba(255, 255, 255, 0.2);
+	
+	/* Text Colors */
+	--text-dark: #2c3e50;
+	--text-medium: #666666;
+	--text-muted: #6c757d;
+	--text-light: #ffffff;
+	
+	/* Neutral & Border */
+	--white: #ffffff;
+	--border: #e0e0e0;
+	--border-light: #f0f0f0;
+	
+	/* Gray Scale (for UI components) */
+	--gray-50: #f9fafb;
+	--gray-100: #f3f4f6;
+	--gray-200: #e5e7eb;
+	--gray-300: #d1d5db;
+	--gray-400: #9ca3af;
+	--gray-500: #6b7280;
+	--gray-600: #4b5563;
+	--gray-700: #374151;
+	--gray-800: #1f2937;
+	--gray-900: #111827;
+	
+	/* Status Colors */
+	--success: #28a745;
+	--success-bg: #e6fffa;
+	--warning: #f39c12;
+	--warning-bg: #fef5e7;
+	--error: #e74c3c;
+	--error-bg: #fee7e7;
+	--info: #3498db;
+	--info-bg: #ebf8ff;
+	
+	/* Inventory Status-Specific Colors */
+	--in-stock: #38a169;
+	--low-stock: #dd6b20;
+	--out-of-stock: #e53e3e;
+	--reserved: #805ad5;
+	--in-transit: #3182ce;
+	--pending: #d69e2e;
+	
+	/* Footer & Sidebar */
+	--footer-text: #ccd7e4;
+	--footer-border: rgba(255, 255, 255, 0.1);
+	--sidebar-overlay: rgba(255, 255, 255, 0.1);
+	
+	/* Shadows */
+	--shadow: rgba(0, 0, 0, 0.1);
+	--shadow-light: rgba(0, 0, 0, 0.05);
+	--shadow-medium: rgba(0, 0, 0, 0.15);
+	
+	/* Focus & Interactive */
+	--focus-ring: rgba(58, 110, 165, 0.5);
+	--hover-overlay: rgba(0, 0, 0, 0.05);
+	--active-overlay: rgba(0, 0, 0, 0.1);
+	
+	/* Charts & Data Visualization */
+	--chart-blue: #3498db;
+	--chart-green: #2ecc71;
+	--chart-yellow: #f1c40f;
+	--chart-orange: #e67e22;
+	--chart-red: #e74c3c;
+	--chart-purple: #9b59b6;
+	--chart-gray: #95a5a6;
+}
