@@ -4,19 +4,6 @@ An Inventory Management System built using **JSP**, **Servlets**, and **JDBC** (
 
 ---
 
-## 📝 Table of Contents
-
-- [📖 Features](#-features)
-- [🧑‍💼 User Roles](#-user-roles)
-- [🛠️ Tech Stack](#-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Setup Instructions](#-setup-instructions)
-- [🗃️ Database Schema](#️-database-schema)
-- [🔑 Sample Credentials](#-sample-credentials)
-- [🖼️ Screenshots](#️-screenshots)
-
----
-
 ## 📖 Features
 
 ### ✅ Product Management (Admin)
