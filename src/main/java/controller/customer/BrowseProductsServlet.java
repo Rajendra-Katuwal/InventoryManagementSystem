@@ -68,9 +68,6 @@ public class BrowseProductsServlet extends HttpServlet {
 				return;
 			}
 
-			// Set messages
-			session.setAttribute("info", products.isEmpty() ? "No products found."
-					: "Showing products " + (startIndex + 1) + "-" + endIndex + " of " + totalProducts);
 
 			// Set JSP attributes
 			request.setAttribute("products", products);
