@@ -109,3 +109,7 @@ CREATE TABLE contact_messages (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
 );
+
+
+INSERT INTO users (user_id, name, email, password, role)
+VALUES (0, 'System', 'system@example.com', 'dummy-password', 'admin');

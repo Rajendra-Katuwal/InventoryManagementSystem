@@ -205,7 +205,8 @@ public class ProductDAO {
 			params.add(categoryId);
 		}
 		if (searchQuery != null && !searchQuery.trim().isEmpty()) {
-			sql.append(" AND (p.name ILIKE ? OR p.sku ILIKE ?)");
+			// Changed from ILIKE to LIKE for MariaDB compatibility
+			sql.append(" AND (LOWER(p.name) LIKE LOWER(?) OR LOWER(p.sku) LIKE LOWER(?))");
 			String searchPattern = "%" + searchQuery.trim() + "%";
 			params.add(searchPattern);
 			params.add(searchPattern);
@@ -252,7 +253,8 @@ public class ProductDAO {
 			params.add(categoryId);
 		}
 		if (searchQuery != null && !searchQuery.trim().isEmpty()) {
-			sql.append(" AND (name ILIKE ? OR sku ILIKE ?)");
+			// Changed from ILIKE to LIKE with LOWER for MariaDB compatibility
+			sql.append(" AND (LOWER(name) LIKE LOWER(?) OR LOWER(sku) LIKE LOWER(?))");
 			String searchPattern = "%" + searchQuery.trim() + "%";
 			params.add(searchPattern);
 			params.add(searchPattern);
