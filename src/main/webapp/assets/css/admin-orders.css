@@ -1,0 +1,644 @@
+/* Modern Inventory Management CSS */
+.orders-container {
+	padding: 1.5rem;
+	color: var(--text-dark);
+	max-width: 100%;
+	background-color: var(--bg-light);
+}
+
+h1 {
+	font-size: 1.75rem;
+	font-weight: 500;
+	color: var(--text-dark);
+	margin-bottom: 1.5rem;
+}
+
+/* Header with search */
+.orders-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+/* Search Form */
+.search-form {
+	display: flex;
+	gap: 8px;
+	flex: 1;
+	min-width: 280px;
+	max-width: 500px;
+}
+
+.search-wrapper {
+	position: relative;
+	flex: 1;
+}
+
+.search-icon {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--gray-400);
+}
+
+.search-input {
+	padding: 10px 10px 10px 32px;
+	border: 1px solid var(--gray-200);
+	border-radius: 6px;
+	font-size: 14px;
+	width: 100%;
+	transition: all 0.2s ease;
+	background-color: var(--white);
+}
+
+.search-input:focus {
+	outline: none;
+	border-color: var(--primary);
+	box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+.btn-search {
+	border-radius: 6px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	gap: 8px;
+	white-space: nowrap;
+	border: none;
+	background-color: var(--primary);
+	color: var(--white);
+	padding: 0.75rem 1.25rem;
+	transition: background-color 0.2s;
+}
+
+.btn-search:hover {
+	background-color: var(--primary-dark);
+}
+
+/* Pagination Info */
+.pagination-info {
+	color: var(--text-medium);
+	font-size: 0.875rem;
+	margin-bottom: 1rem;
+}
+
+.pagination-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Table */
+.table-responsive {
+	background-color: var(--white);
+	border-radius: 0.25rem;
+	box-shadow: 0 1px 3px var(--shadow-light);
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+}
+
+.orders-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.orders-table th {
+	font-size: 0.75rem;
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 1px solid var(--gray-200);
+	background-color: var(--gray-200);
+	font-weight: 600;
+	color: var(--text-dark);
+	letter-spacing: 0.5px;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.orders-table td {
+	padding: 1rem;
+	font-size: 0.875rem;
+	color: var(--text-dark);
+	border-bottom: 1px solid var(--gray-100);
+}
+
+.orders-table tbody tr:nth-child(even) {
+	background-color: var(--gray-50);
+}
+
+.orders-table tbody tr:hover {
+	background-color: var(--gray-100);
+}
+
+/* Status badges */
+[class^="status-"] {
+	padding: 0.30rem 0.8rem;
+	border-radius: 1rem;
+	font-size: 0.75rem;
+	font-weight: 500;
+	display: inline-block;
+}
+
+.status-pending {
+	background-color: var(--warning-bg);
+	color: var(--warning);
+}
+
+.status-in-transit {
+	background-color: var(--info-bg);
+	color: var(--in-transit);
+}
+
+.status-delivered {
+	background-color: var(--success-bg);
+	color: var(--success);
+}
+
+.status-cancelled {
+	background-color: var(--error-bg);
+	color: var(--error);
+}
+
+/* Action Icons */
+.action-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: flex-start;
+}
+
+.action-icon {
+	color: var(--gray-500);
+	font-size: 1rem;
+	transition: all 0.2s;
+	display: inline-block;
+}
+
+.action-icon.view-icon:hover {
+	color: var(--primary);
+}
+
+.action-icon.edit-icon:hover {
+	color: var(--primary-dark);
+}
+
+.action-icon.delete-icon:hover {
+	color: var(--error);
+}
+
+/* Notification */
+.notification {
+	padding: 0.75rem 1rem;
+	border-radius: 0.25rem;
+	margin-bottom: 1rem;
+	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+}
+
+.notification:before {
+	margin-right: 0.75rem;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+}
+
+.notification.error {
+	background-color: var(--error-bg);
+	color: var(--error);
+}
+
+.notification.error:before {
+	content: "\f06a"; /* fa-exclamation-circle */
+}
+
+.notification.success {
+	background-color: var(--success-bg);
+	color: var(--success);
+}
+
+.notification.success:before {
+	content: "\f058"; /* fa-check-circle */
+}
+
+/* No Data */
+.no-data {
+	padding: 2rem;
+	text-align: center;
+	color: var(--gray-500);
+	font-style: italic;
+}
+
+/* Pagination */
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.btn-pagination {
+	min-width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+	color: var(--text-dark);
+	background-color: var(--white);
+	border: 1px solid var(--gray-200);
+	cursor: pointer;
+	transition: all 0.2s;
+	text-decoration: none;
+}
+
+.btn-pagination:hover {
+	background-color: var(--gray-100);
+	border-color: var(--gray-300);
+}
+
+.btn-pagination.active {
+	background-color: var(--primary);
+	color: var(--white);
+	border-color: var(--primary);
+}
+
+/* Add Product Button */
+.btn-add {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: var(--primary);
+	color: var(--white);
+	border: none;
+	padding: 0.75rem 1.25rem;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	text-decoration: none;
+}
+
+.btn-add:hover {
+	background-color: var(--primary-dark);
+}
+
+/* Modal Styles */
+/* Order Management Modal Styles
+ * Combined styles for view-order-modal, edit-order-modal, and cancel-order-modal
+ */
+
+/* Base Modal Styles */
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 1000;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-content {
+	background-color: var(--white);
+	border-radius: 0.25rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+	width: 90%;
+	max-width: 550px;
+	max-height: 90vh;
+	overflow-y: auto;
+	padding: 1.5rem;
+	position: relative;
+}
+
+.modal-close {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: var(--gray-100);
+	color: var(--gray-600);
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	z-index: 10;
+}
+
+.modal-close:hover {
+	background-color: var(--gray-200);
+	color: var(--gray-800);
+}
+
+/* Modal Headers */
+.modal-content h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--text-dark);
+	margin-bottom: 1.25rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid var(--gray-200);
+}
+
+.modal-content p {
+	margin-bottom: 1.5rem;
+	font-size: 0.95rem;
+	color: var(--text-medium);
+}
+
+/* Order Details Section */
+.order-details {
+	margin-bottom: 2rem;
+}
+
+.order-detail-item {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.detail-label {
+	font-weight: 500;
+	font-size: 0.875rem;
+	color: var(--gray-600);
+	margin-bottom: 0.25rem;
+}
+
+.detail-value {
+	font-size: 0.95rem;
+	color: var(--text-dark);
+}
+
+/* Order Items Table */
+.order-items-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 0.5rem;
+	font-size: 0.875rem;
+}
+
+.order-items-table th {
+	padding: 0.75rem;
+	text-align: left;
+	border-bottom: 1px solid var(--gray-200);
+	font-weight: 600;
+	color: var(--gray-600);
+	background-color: var(--gray-100);
+}
+
+.order-items-table td {
+	padding: 0.75rem;
+	border-bottom: 1px solid var(--gray-100);
+	color: var(--text-dark);
+}
+
+.order-items-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.order-items-table tbody tr:nth-child(even) {
+	background-color: var(--gray-50);
+}
+
+/* Form Elements in Modals */
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	font-size: 0.875rem;
+	color: var(--text-dark);
+}
+
+.form-group select, .form-group input {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid var(--gray-300);
+	border-radius: 0.25rem;
+	font-size: 0.95rem;
+	color: var(--text-dark);
+	background-color: var(--white);
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group select:focus, .form-group input:focus {
+	outline: none;
+	border-color: var(--primary);
+	box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+/* Action Buttons */
+.form-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+.btn {
+	padding: 0.75rem 1.25rem;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.2s, transform 0.1s;
+	border: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.btn:active {
+	transform: translateY(1px);
+}
+
+.btn-save {
+	background-color: var(--primary);
+	color: var(--white);
+}
+
+.btn-save:hover {
+	background-color: var(--primary-dark);
+}
+
+.btn-cancel {
+	background-color: var(--gray-200);
+	color: var(--gray-700);
+}
+
+.btn-cancel:hover {
+	background-color: var(--gray-300);
+}
+
+.btn-delete {
+	background-color: var(--error);
+	color: var(--white);
+}
+
+.btn-delete:hover {
+	background-color: #d44333; /* Slightly darker than var(--error) */
+}
+
+/* Responsive Design for Modals */
+@media ( max-width : 640px) {
+	.modal-content {
+		width: 95%;
+		padding: 1.25rem;
+	}
+	.order-detail-item {
+		margin-bottom: 0.75rem;
+	}
+	.form-actions {
+		flex-direction: column;
+	}
+	.form-actions button {
+		width: 100%;
+	}
+	.order-items-table {
+		display: block;
+		overflow-x: auto;
+	}
+
+	/* Convert order detail items to flex-row on small screens */
+	.order-detail-item {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.detail-label {
+		margin-bottom: 0;
+		font-weight: 600;
+	}
+}
+
+/* Special styling for View Order Modal */
+#view-order-modal .order-detail-item {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--gray-100);
+}
+
+#view-order-modal .order-detail-item:last-child {
+	border-bottom: none;
+}
+
+/* Special styling for Cancel Order Modal */
+#cancel-order-modal p {
+	text-align: center;
+	color: var(--text-dark);
+	font-size: 1rem;
+	margin: 1.5rem 0;
+}
+
+/* Special styling for Edit Order Modal */
+#edit-order-modal select {
+	cursor: pointer;
+}
+
+/* Status color indicators in dropdowns */
+#edit-order-modal select option[value="Pending"] {
+	color: var(--warning);
+}
+
+#edit-order-modal select option[value="In Transit"] {
+	color: var(--in-transit);
+}
+
+#edit-order-modal select option[value="Delivered"] {
+	color: var(--success);
+}
+
+#edit-order-modal select option[value="cancelled"] {
+	color: var(--error);
+}
+
+/* Responsive Adjustments */
+@media ( max-width : 992px) {
+	.orders-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.search-form {
+		max-width: 100%;
+		width: 100%;
+	}
+	.btn-add {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media ( max-width : 768px) {
+	.orders-container {
+		padding: 1rem;
+	}
+}
+
+@media ( max-width : 640px) {
+	/* Card-based layout for mobile */
+	.orders-table thead {
+		display: none;
+	}
+	.orders-table, .orders-table tbody, .orders-table tr {
+		display: block;
+		width: 100%;
+	}
+	.orders-table tbody tr {
+		margin-bottom: 1rem;
+		border-radius: 0.25rem;
+		box-shadow: 0 1px 3px var(--shadow-light);
+		background-color: var(--white);
+		overflow: hidden;
+	}
+	.orders-table td {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid var(--gray-100);
+		text-align: right;
+	}
+	.orders-table td:before {
+		content: attr(data-label);
+		font-weight: 500;
+		text-align: left;
+		word-break: break-word;
+		padding-right: 0.5rem;
+	}
+	.orders-table td.action-buttons {
+		justify-content: flex-end;
+	}
+	.orders-table td.action-buttons:before {
+		display: none;
+	}
+	.action-buttons {
+		padding: 0.5rem 0;
+	}
+	.action-icon {
+		padding: 0.5rem;
+	}
+	.pagination {
+		justify-content: center;
+	}
+}
