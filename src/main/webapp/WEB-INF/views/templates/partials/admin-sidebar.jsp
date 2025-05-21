@@ -45,12 +45,6 @@
 				aria-hidden="true">📈</span> <span class="admin-sidebar-title">Reports</span>
 		</a></li>
 		<li class="admin-sidebar-item" role="menuitem"><a
-			href="${pageContext.request.contextPath}/admin/profile"
-			class="admin-sidebar-link" data-tooltip="Profile"
-			aria-label="Go to Profile"> <span class="admin-sidebar-icon"
-				aria-hidden="true">⚙️</span> <span class="admin-sidebar-title">Profile</span>
-		</a></li>
-		<li class="admin-sidebar-item" role="menuitem"><a
 			href="${pageContext.request.contextPath}/logout"
 			class="admin-sidebar-link" data-tooltip="Logout" aria-label="Log out">
 				<span class="admin-sidebar-icon" aria-hidden="true">🚪</span> <span
